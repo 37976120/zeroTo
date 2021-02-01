@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <groupId>ml.hfer</groupId>
+    <artifactId>zeroTo-common-bom</artifactId>
+    <version>${zeroTo.version}</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <zeroTo.version>1.0.0</zeroTo.version>
+        <pigx.version>3.11.0</pigx.version>
+        <mybatis-plus.version>3.4.1</mybatis-plus.version>
+        <dynamic-ds.version>3.2.0</dynamic-ds.version>
+        <druid.version>1.2.3</druid.version>
+        <mysql.connector.version>8.0.22</mysql.connector.version>
+        <swagger.core.version>1.5.22</swagger.core.version>
+        <mp.weixin.version>3.9.0</mp.weixin.version>
+        <ijpay.version>2.7.0</ijpay.version>
+        <groovy.version>3.0.3</groovy.version>
+        <jsoup.version>1.13.1</jsoup.version>
+        <security.oauth.version>2.3.6.RELEASE</security.oauth.version>
+        <fastjson.version>1.2.73</fastjson.version>
+        <aliyun.version>3.0.52.ALL</aliyun.version>
+        <javaformat.plugin.version>0.0.23</javaformat.plugin.version>
+        <docker.plugin.version>0.33.0</docker.plugin.version>
+        <cloud.plugin.version>1.1.1</cloud.plugin.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!--   引入实际JAR包位置的依赖            -->
+                <groupId>ml.hfer</groupId>
+                <artifactId>zeroTo-common-data3</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <!--**********************************************************************************-->
+            <!-- 所有依赖的版本控制，总的项目pom依赖这个版本控制来进行版本的管理 -->
+            <!-- mybatis plus extension,包含了mybatis plus core -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
