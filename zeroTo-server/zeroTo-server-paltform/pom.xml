@@ -3,29 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>zeroTo</artifactId>
+        <artifactId>zeroTo-server</artifactId>
         <groupId>ml.hfer</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>zeroTo-server</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>zeroTo-server-paltform</module>
-    </modules>
+    <artifactId>zeroTo-server-paltform</artifactId>
 
     <dependencies>
-        <!--        服务引入jar包-->
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <!--   相当于把下面可选的整合到一个pom            -->
+            <groupId>ml.hfer</groupId>
+            <artifactId>zeroTo-common-data3</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
-
 </project>
