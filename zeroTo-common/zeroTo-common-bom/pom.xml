@@ -33,7 +33,8 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <!--   相当于把BOM中可选的整合到一个pom，就算有重复依赖MAVEN根据就近原则            -->
+                <!--   相当于把bom中可选的整合到一个pom，就算有重复依赖MAVEN根据就近原则
+                            test period-->
                 <groupId>ml.hfer</groupId>
                 <artifactId>zeroTo-common-data3</artifactId>
                 <version>1.0.0</version>

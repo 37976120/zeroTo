@@ -35,25 +35,16 @@
     <packaging>pom</packaging>
 
     <properties>
+        <!--  !!dependencyManagement.version       -->
         <spring-boot.version>2.3.6.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.3.RELEASE</spring-cloud-alibaba.version>
+        <security.oauth.version>2.3.6.RELEASE</security.oauth.version>
+        <!--  @@dependencyManagement.version       -->
     </properties>
-
-    <dependencies>
-
-    </dependencies>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>ml.hfer</groupId>
-                <artifactId>zeroTo-common-bom</artifactId>
-                <version>${project.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <!--spring boot 公共版本定义-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -61,11 +52,17 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--spring cloud 公共版本定义-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>ml.hfer</groupId>
+                <artifactId>zeroTo-common-bom</artifactId>
+                <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -76,6 +73,12 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!--稳定版本，替代spring security bom内置-->
+            <dependency>
+                <groupId>org.springframework.security.oauth</groupId>
+                <artifactId>spring-security-oauth2</artifactId>
+                <version>${security.oauth.version}</version>
             </dependency>
             <!--web 模块-->
             <dependency>
