@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
 
     <properties>
+                   <!--  版本号源      -->
         <zeroTo.version>1.0.0</zeroTo.version>
         <pigx.version>3.11.0</pigx.version>
         <mybatis-plus.version>3.4.1</mybatis-plus.version>
@@ -33,11 +34,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <!--   相当于把bom中可选的整合到一个pom，就算有重复依赖MAVEN根据就近原则
+                <!--   相当于把bom中可选的打包整合到一个pom，就算有重复依赖MAVEN根据就近原则
                             test period-->
                 <groupId>ml.hfer</groupId>
                 <artifactId>zeroTo-common-data3</artifactId>
-                <version>1.0.0</version>
+                <version>${zeroTo.version}</version>
             </dependency>
             <!--**********************************************************************************-->
             <!-- 所有依赖的版本控制，总的项目pom依赖这个版本控制来进行版本的管理 -->
