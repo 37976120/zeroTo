@@ -35,16 +35,59 @@
     <packaging>pom</packaging>
 
     <properties>
-        <!--  !!dependencyManagement.version       -->
+        <!--  dependencyManagement.version       -->
         <spring-boot.version>2.3.6.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.3.RELEASE</spring-cloud-alibaba.version>
+        <!--  dependencyManagement.version       -->
+
+<!--        <spring-boot.version>2.4.3</spring-boot.version>-->
+        <!--        <spring-cloud.version>2020.0.1</spring-cloud.version>-->
+        <!--        <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>-->
+
+
         <security.oauth.version>2.3.6.RELEASE</security.oauth.version>
-        <!--  @@dependencyManagement.version       -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.version>3.8.1</maven.compiler.version>
+        <spring.checkstyle.version>0.0.23</spring.checkstyle.version>
+        <git.commit.version>2.2.5</git.commit.version>
+        <spring-boot-admin.version>2.3.1</spring-boot-admin.version>
+        <hutool.version>5.5.8</hutool.version>
+        <captcha.version>1.2.7</captcha.version>
+        <swagger.fox.version>3.0.0</swagger.fox.version>
+        <knife4j.version>3.0.2</knife4j.version>
+        <velocity.version>1.7</velocity.version>
+        <lcn.version>4.1.0</lcn.version>
+        <jasypt.version>3.0.3</jasypt.version>
+        <ttl.version>2.11.4</ttl.version>
+        <ureport.version>2.2.9</ureport.version>
+        <aws.version>1.11.543</aws.version>
+        <xxl.job.version>2.3.0</xxl.job.version>
+        <activiti.version>5.22.0</activiti.version>
+        <docker.registry>172.17.0.111</docker.registry>
+        <docker.host>http://172.17.0.111:2375</docker.host>
+        <docker.namespace>library</docker.namespace>
+        <docker.username>admin</docker.username>
+        <docker.password>Harbor12345</docker.password>
+        <docker.plugin.version>0.33.0</docker.plugin.version>
+        <!--  默认忽略docker构建 -->
+        <docker.skip>false</docker.skip>
+<!--        other-->
+        <kaptcha.version>1.6.2</kaptcha.version>
+        <knife4j.version>2.0.2</knife4j.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>ml.hfer</groupId>
+                <artifactId>zeroTo-common-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -56,13 +99,6 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>ml.hfer</groupId>
-                <artifactId>zeroTo-common-bom</artifactId>
-                <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
