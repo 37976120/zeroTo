@@ -15,17 +15,4 @@
         <module>zeroTo-server-paltform</module>
     </modules>
 
-    <dependencies>
-        <!--        服务引入jar包-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-        </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>com.baomidou</groupId>-->
-<!--            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>-->
-<!--        </dependency>-->
-    </dependencies>
-
 </project>
