@@ -1,0 +1,11 @@
+server:
+  port: 8085
+  servlet:
+    context-path: '/'
+spring:
+  application:
+    name: '@artifactId@'
+  mvc:
+    view:
+      prefix: '/WEB-INF/views'
+      suffix: '.jsp'

@@ -29,6 +29,9 @@
     <modules>
         <module>zeroTo-common</module>
         <module>zeroTo-server</module>
+        <module>springsec_mvc</module>
+        <module>spring_security</module>
+        <module>springbootSec</module>
     </modules>
 
     <name>${project.artifactId}</name>
